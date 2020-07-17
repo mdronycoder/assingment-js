@@ -1,13 +1,4 @@
-// 1st Way feetToMile
-
-function feetToMile(feet){
-    var mile = feet *  0.00018939;
-    return mile;
-}
-var result = feetToMile(3000);
-console.log(result);
-
-// 2nd way feetToMile
+//feetToMile 
 
 function feetToMile(feet){
     var mile = feet / 5280;
@@ -35,23 +26,33 @@ console.log ( result)
 
 
 //  brickCalculator assingment
-
-function brickCalculator(floorNumber){
-    if(floorNumber <= 10 ){
-        return floorNumber * 15 * 1000;
-    }
-    else if((floorNumber > 10) && (floorNumber <= 20 )){
-       return floorNumber * 12 * 1000;;
-    }
-    else if(floorNumber > 20){
-        return floorNumber * 10 * 1000;
+function brickCalculator(calculate){
+    const oneFeet           = 1000;
+    const firstTenFloors    = 15;
+    const secondTenFloors   = 12;
+    const overTwenty        = 10;
+    if(calculate <= 10){
+        var multiply = calculate * firstTenFloors;
+        var result = multiply  * oneFeet;
+        return result;
+    }else if(calculate <=20){
+        var subtract = calculate - 10;
+        var multiply = subtract * secondTenFloors;
+        var firstTen = 10 * 15;
+        var total    = multiply + firstTen;
+        var result = total * oneFeet;
+        return result;
+    }else if(calculate > 20){
+        var subtract = calculate - 20;
+        var multiply = subtract * overTwenty;
+        var firstTen = 10*15;
+        var secondTen = 10*12;
+        var total = multiply + firstTen + secondTen;
+        var result = total  *oneFeet;
+        return result;
     }
 }
-
-result=brickCalculator(13);
-
-console.log(result);
-
+console.log(brickCalculator(17));
 
 
 
