@@ -32,6 +32,29 @@ console.log ( result)
 
 
 
+
+
+//  brickCalculator assingment
+
+function brickCalculator(floorNumber){
+    if(floorNumber <= 10 ){
+        return floorNumber * 15 * 1000;
+    }
+    else if((floorNumber > 10) && (floorNumber <= 20 )){
+       return floorNumber * 12 * 1000;;
+    }
+    else if(floorNumber > 20){
+        return floorNumber * 10 * 1000;
+    }
+}
+
+result=brickCalculator(13);
+
+console.log(result);
+
+
+
+
 //  tinyFriend assingment
 
 function tinyFriend(numbers){
